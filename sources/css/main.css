@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: rgb(80, 75, 75);
+    padding: 60px 0;
+}
+
+.toggle{
+    width: 90%;
+    max-width: 1500px;
+    margin: 30px auto;
+}
+.toggle__top{
+    width: 100%;
+    padding: 20px 60px 20px 15px;
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.toggle__icon{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border-radius: 100px;
+    background-color: #fff;
+    border: 1px solid rgb(80, 75, 75);
+    right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toggle__icon--top{
+    width: calc(100% - 10px);
+    height: 2px;
+    background-color: rgb(80, 75, 75);
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.toggle__icon--top::after{
+    position: absolute;
+    content: "";
+    width: 1.7px;
+    height: 25px;
+    top: -11.5px;
+    background-color: rgb(80, 75, 75);
+    transition: .3s height ease;
+}
+.toggle__top.active .toggle__icon--top::after{
+    height: 0;
+}
+.toggle__bottom{
+    padding: 0 15px 0 15px;
+    background-color: #fff;
+    height: 0;
+    overflow: hidden;
+    transition: .8s height ease;
+}
